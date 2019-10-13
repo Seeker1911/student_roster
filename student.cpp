@@ -12,8 +12,8 @@ Student::Student() {
     this->lastName = "last_name";
     this->emailAddress = "email_address";
     this->age = 0;
-    this->num_days = new int[num_days_size];
-    for (int i = 0; i < num_days_size; ++i) this->num_days[i] = 0;
+    this->numberDays = new int[num_days_size];
+    for (int i = 0; i < num_days_size; ++i) this->numberDays[i] = 0;
 }
 
 //construct
@@ -23,8 +23,8 @@ Student::Student(string id, string fname, string lname, string eaddress, int a, 
     this->lastName = lname;
     this->emailAddress = eaddress;
     this->age = a;
-    this->num_days = new int[num_days_size];
-    for (int i = 0; i < 3; ++i) this->num_days[i] = num_days[i];
+    this->numberDays = new int[num_days_size];
+    for (int i = 0; i < 3; ++i) this->numberDays[i] = num_days[i];
 }
 
 //access
@@ -49,7 +49,7 @@ int Student::getAge() {
 }
 
 int *Student::getNumDays() {
-    return num_days;
+    return numberDays;
 }
 
 //mutate
@@ -57,30 +57,30 @@ void Student::setStudentID(string id) {
     this->studentID = id;
 }
 
-void Student::setFirstName(string fname) {
-    this->firstName = fname;
+void Student::setFirstName(string firstName) {
+    this->firstName = firstName;
 }
 
-void Student::setLastName(string lname) {
-    this->lastName = lname;
+void Student::setLastName(string lastName) {
+    this->lastName = lastName;
 }
 
-void Student::setEmailAddress(string eaddress) {
-    this->emailAddress = eaddress;
+void Student::setEmailAddress(string emailAddress) {
+    this->emailAddress = emailAddress;
 }
 
-void Student::setAge(int a) {
-    this->age = a;
+void Student::setAge(int age) {
+    this->age = age;
 }
 
-void Student::setNumDays(int num_days[]) {
-    if (this->num_days != nullptr) {
-        delete[] this->num_days;
-        this->num_days = nullptr;
+void Student::setNumDays(int numberDays[]) {
+    if (this->numberDays != nullptr) {
+        delete[] this->numberDays;
+        this->numberDays = nullptr;
     }
-    this->num_days = new int[num_days_size];
+    this->numberDays = new int[num_days_size];
     for (int i = 0; i < 3; ++i) {
-        this->num_days[i] = num_days[i];
+        this->numberDays[i] = numberDays[i];
     }
 }
 
@@ -96,8 +96,8 @@ void Student::print() {
 
 //destructor
 Student::~Student() {
-    if (num_days != nullptr) {
-        delete[] num_days;
-        num_days = nullptr;
+    if (numberDays != nullptr) {
+        delete[] numberDays;
+        numberDays = nullptr;
     }
 }

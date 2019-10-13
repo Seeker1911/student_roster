@@ -15,7 +15,7 @@ protected:
     string lastName;
     string emailAddress;
     int age;
-    int *num_days; // array of daysremaining in course
+    int *numberDays; // array of daysremaining in course
     Degree degree;
 
 
