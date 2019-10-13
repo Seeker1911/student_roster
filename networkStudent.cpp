@@ -4,21 +4,21 @@
 using namespace std;
 
 NetworkStudent::NetworkStudent() {
-    setDegree(NETWORK);
+    setDegree(NETWORKING);
 }
 
-NetworkStudent::NetworkStudent(string id, string fname, string lname, string eaddress, int a, int *num_days,
+NetworkStudent::NetworkStudent(string id, string firstName, string lastName, string emailAddress, int age, int *numberDays,
                                Degree degree) {
-    setDegree(NETWORK);
+    setDegree(NETWORKING);
 }
 
 Degree NetworkStudent::getDegree() {
-    return NETWORK;
+    return NETWORKING;
 }
 
 
 void NetworkStudent::setDegree(Degree d) {
-    this->degree = NETWORK;
+    this->degree = NETWORKING;
 }
 
 

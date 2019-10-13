@@ -38,42 +38,42 @@ void Roster::add(string row) {
             classRosterArray[lastIndex]->setDegree(SOFTWARE);
         } else if (row.substr(row.length() - 7, 7) == "NETWORK") {
             this->classRosterArray[lastIndex] = new NetworkStudent();
-            classRosterArray[lastIndex]->setDegree(NETWORK);
+            classRosterArray[lastIndex]->setDegree(NETWORKING);
         } else if (row.substr(row.length() - 8, 8) == "SECURITY") {
             this->classRosterArray[lastIndex] = new SecurityStudent();
             classRosterArray[lastIndex]->setDegree(SECURITY);
         }
 
-        int rhs = studentData[lastIndex].find(",");
-        classRosterArray[lastIndex]->setStudentID(studentData[lastIndex].substr(0, rhs));
+        int rightIndex = studentData[lastIndex].find(",");
+        classRosterArray[lastIndex]->setStudentID(studentData[lastIndex].substr(0, rightIndex));
 
-        int lhs = rhs + 1;
-        rhs = studentData[lastIndex].find(",", lhs);
-        classRosterArray[lastIndex]->setFirstName(studentData[lastIndex].substr(lhs, rhs - lhs));
+        int leftIndex = rightIndex + 1;
+        rightIndex = studentData[lastIndex].find(",", leftIndex);
+        classRosterArray[lastIndex]->setFirstName(studentData[lastIndex].substr(leftIndex, rightIndex - leftIndex));
 
-        lhs = rhs + 1;
-        rhs = studentData[lastIndex].find(",", lhs);
-        classRosterArray[lastIndex]->setLastName(studentData[lastIndex].substr(lhs, rhs - lhs));
+        leftIndex = rightIndex + 1;
+        rightIndex = studentData[lastIndex].find(",", leftIndex);
+        classRosterArray[lastIndex]->setLastName(studentData[lastIndex].substr(leftIndex, rightIndex - leftIndex));
 
-        lhs = rhs + 1;
-        rhs = studentData[lastIndex].find(",", lhs);
-        classRosterArray[lastIndex]->setEmailAddress(studentData[lastIndex].substr(lhs, rhs - lhs));
+        leftIndex = rightIndex + 1;
+        rightIndex = studentData[lastIndex].find(",", leftIndex);
+        classRosterArray[lastIndex]->setEmailAddress(studentData[lastIndex].substr(leftIndex, rightIndex - leftIndex));
 
-        lhs = rhs + 1;
-        rhs = studentData[lastIndex].find(",", lhs);
-        classRosterArray[lastIndex]->setAge(stoi(studentData[lastIndex].substr(lhs, rhs - lhs)));
+        leftIndex = rightIndex + 1;
+        rightIndex = studentData[lastIndex].find(",", leftIndex);
+        classRosterArray[lastIndex]->setAge(stoi(studentData[lastIndex].substr(leftIndex, rightIndex - leftIndex)));
 
-        lhs = rhs + 1;
-        rhs = studentData[lastIndex].find(",", lhs);
-        numDaysArray[0] = stoi(studentData[lastIndex].substr(lhs, rhs - lhs));
+        leftIndex = rightIndex + 1;
+        rightIndex = studentData[lastIndex].find(",", leftIndex);
+        numDaysArray[0] = stoi(studentData[lastIndex].substr(leftIndex, rightIndex - leftIndex));
 
-        lhs = rhs + 1;
-        rhs = studentData[lastIndex].find(",", lhs);
-        numDaysArray[1] = stoi(studentData[lastIndex].substr(lhs, rhs - lhs));
+        leftIndex = rightIndex + 1;
+        rightIndex = studentData[lastIndex].find(",", leftIndex);
+        numDaysArray[1] = stoi(studentData[lastIndex].substr(leftIndex, rightIndex - leftIndex));
 
-        lhs = rhs + 1;
-        rhs = studentData[lastIndex].find(",", lhs);
-        numDaysArray[2] = stoi(studentData[lastIndex].substr(lhs, rhs - lhs));
+        leftIndex = rightIndex + 1;
+        rightIndex = studentData[lastIndex].find(",", leftIndex);
+        numDaysArray[2] = stoi(studentData[lastIndex].substr(leftIndex, rightIndex - leftIndex));
 
         classRosterArray[lastIndex]->setNumDays(numDaysArray);
     }

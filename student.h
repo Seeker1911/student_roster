@@ -15,7 +15,7 @@ protected:
     string lastName;
     string emailAddress;
     int age;
-    int *numberDays; // array of daysremaining in course
+    int *numberDays;
     Degree degree;
 
 
@@ -25,10 +25,9 @@ public:
     //constructors
     Student();
 
-    Student(string id, string fname, string lname, string eaddress, int a, int num_days[], Degree degree);
+    Student(string id, string firstName, string lastName, string emailAddress, int age, int numberDays[], Degree degree);
 
     //accessors
-
     string getStudentID();
 
     string getFirstName();
@@ -46,17 +45,17 @@ public:
     //mutators
     void setStudentID(string id);
 
-    void setFirstName(string fname);
+    void setFirstName(string firstName);
 
-    void setLastName(string lname);
+    void setLastName(string lastName);
 
-    void setEmailAddress(string eaddress);
+    void setEmailAddress(string emailAddress);
 
-    void setAge(int a);
+    void setAge(int age);
 
-    void setNumDays(int num_days[]);
+    void setNumDays(int numberDays[]);
 
-    virtual void setDegree(Degree d) = 0;
+    virtual void setDegree(Degree degree) = 0;
 
     virtual void print() = 0;
 

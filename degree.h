@@ -6,8 +6,8 @@
 using namespace std;
 
 enum Degree {
-    SECURITY, NETWORK, SOFTWARE
+    SECURITY, NETWORKING, SOFTWARE
 };
-static const string degreeTypeString[] = {"SECURITY", "NETWORK", "SOFTWARE"};
+static const string degreeTypeString[] = {"SECURITY", "NETWORKING", "SOFTWARE"};
 
 #endif
