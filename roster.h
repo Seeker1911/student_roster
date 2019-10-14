@@ -34,7 +34,7 @@ public:
 
     void remove(string id);
 
-    void printAverageDays(string id);
+    void printDaysInCourse(string id);
 
     void printInvalidEmails();
 

@@ -100,13 +100,13 @@ void Roster::printAll() {
     }
 }
 
-void Roster::printAverageDays(string id) {
+void Roster::printDaysInCourse(string id) {
     bool found = false;
     for (int i = 0; i <= lastIndex; ++i) {
         if (this->classRosterArray[i]->getStudentID() == id) {
             found = true;
             int *days = classRosterArray[i]->getNumDays();
-            cout << "Average number of days per course for student id: " << id << ": "
+            cout << "Average number of days per course for student id: " << id << " = "
                  << (days[0] + days[1] + days[2]) / 3 << endl;
         }
     }
@@ -156,7 +156,7 @@ int main() {
 
     cout << "Average days in course:" << endl;
     for (int i = 0; i < numStudents; ++i) {
-        classRoster->printAverageDays(classRoster->classRosterArray[i]->getStudentID());
+        classRoster->printDaysInCourse(classRoster->classRosterArray[i]->getStudentID());
     }
     cout << endl;
 
