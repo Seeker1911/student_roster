@@ -38,7 +38,7 @@ public:
 
     void printInvalidEmails();
 
-    void printDegree(Degree d);
+    void printByDegreeProgram(Degree d);
 
     ~Roster();
 };

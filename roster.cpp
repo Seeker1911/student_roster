@@ -123,7 +123,7 @@ void Roster::printInvalidEmails() {
     }
 }
 
-void Roster::printDegree(Degree d) {
+void Roster::printByDegreeProgram(Degree d) {
     cout << "Student roster by degree type: " << degreeTypeString[d] << "\n";
     for (int i = 0; i <= lastIndex; ++i) {
         if (this->classRosterArray[i]->getDegree() == d) this->classRosterArray[i]->print();
@@ -160,7 +160,7 @@ int main() {
     }
     cout << endl;
 
-    classRoster->printDegree(SOFTWARE);
+    classRoster->printByDegreeProgram(SOFTWARE);
     classRoster->remove("A3");
     classRoster->remove("A3");
     cout << endl;
