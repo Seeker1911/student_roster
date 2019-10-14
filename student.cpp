@@ -88,9 +88,9 @@ void Student::print() {
     int *courseday = getNumDays();
 
     cout << studentID << endl;
-    cout << "First name: " << firstName << "\t";
-    cout << "Last name: " << lastName << "\t";
-    cout << "Age: " << age << "\t";
+    cout << "First name: " << firstName << " --- ";
+    cout << "Last name: " << lastName << " --- ";
+    cout << "Age: " << age << " --- ";
     cout << "Days in course: {" << *courseday << " " << *(courseday + 1) << " " << *(courseday + 2) << "}" << "\t";
 }
 

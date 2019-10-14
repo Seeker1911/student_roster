@@ -7,7 +7,7 @@ SecurityStudent::SecurityStudent() {
     setDegree(SECURITY);
 }
 
-SecurityStudent::SecurityStudent(string id, string fname, string lname, string eaddress, int a, int *num_days,
+SecurityStudent::SecurityStudent(string id, string firstName, string lastName, string emailAddress, int age, int *numberDays,
                                  Degree degree) {
     setDegree(SECURITY);
 }

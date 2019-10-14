@@ -84,11 +84,11 @@ void Roster::remove(string id) {
 
     for (int i = 0; i <= lastIndex; ++i) {
         if (classRosterArray[i] == nullptr) {
-            cout << "error... student with ID: " << id << " not found" << endl;
+            cout << "error... student with ID: " << id << " not found" << "\n" << endl;
             break;
         } else if (id == classRosterArray[i]->getStudentID()) {
             classRosterArray[i] = nullptr;
-            cout << "Student removed" << endl;
+            cout << "Student " << id << " removed" << "\n" << endl;
         }
     }
 

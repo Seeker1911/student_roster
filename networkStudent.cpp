@@ -24,7 +24,7 @@ void NetworkStudent::setDegree(Degree d) {
 
 void NetworkStudent::print() {
     this->Student::print();
-    cout << "NETWORK" << "\n";
+    cout << "NETWORKING" << "\n";
 }
 
 NetworkStudent::~NetworkStudent() {

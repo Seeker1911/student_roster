@@ -16,7 +16,7 @@ public:
 
     Degree getDegree();
 
-    void setDegree(Degree d);
+    void setDegree(Degree degree);
 
     void print();
 
