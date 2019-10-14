@@ -139,7 +139,11 @@ Roster::~Roster() {
 
 
 int main() {
-    cout << "---------- Student Roster -------------" << endl;
+	cout << "---------- Student Roster " << endl;
+	cout << "---------- Course Title: Scripting and Programming - Applications: C867 " << endl;
+	cout << "---------- Language: C++ " << endl;
+	cout << "---------- Student ID: 000741802 " << endl;
+	cout << "---------- Author: Michael Mead " << endl;
 
     Roster *classRoster = new Roster(numStudents);
     for (int i = 0; i < numStudents; ++i) {
