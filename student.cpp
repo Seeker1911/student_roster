@@ -17,14 +17,14 @@ Student::Student() {
 }
 
 //construct
-Student::Student(string id, string fname, string lname, string eaddress, int a, int num_days[], Degree degree) {
+Student::Student(string id, string firstName, string lastName, string emailAddress, int age, int numberDays[], Degree degree) {
     this->studentID = id;
-    this->firstName = fname;
-    this->lastName = lname;
-    this->emailAddress = eaddress;
-    this->age = a;
+    this->firstName = firstName;
+    this->lastName = lastName;
+    this->emailAddress = emailAddress;
+    this->age = age;
     this->numberDays = new int[num_days_size];
-    for (int i = 0; i < 3; ++i) this->numberDays[i] = num_days[i];
+    for (int i = 0; i < 3; ++i) this->numberDays[i] = numberDays[i];
 }
 
 //access
@@ -87,10 +87,10 @@ void Student::setNumDays(int numberDays[]) {
 void Student::print() {
     int *courseday = getNumDays();
 
-    cout << studentID << endl;
-    cout << "First name: " << firstName << " --- ";
-    cout << "Last name: " << lastName << " --- ";
-    cout << "Age: " << age << " --- ";
+    cout << getStudentID() << "\t";
+    cout << "First name: " << getFirstName() << "\t";
+    cout << "Last name: " << getLastName() << "\t";
+    cout << "Age: " << getAge() << "\t" << "\t";
     cout << "Days in course: {" << *courseday << " " << *(courseday + 1) << " " << *(courseday + 2) << "}" << "\t";
 }
 
